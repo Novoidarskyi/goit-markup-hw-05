@@ -105,6 +105,7 @@ img {
 }
 
 .site-nav-link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -129,6 +130,15 @@ img {
   margin-right: 50px;
 }
 
+.site-nav-link.current::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
 .contact-list {
   display: flex;
   align-items: center;
